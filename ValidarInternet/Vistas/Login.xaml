@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ValidarInternet.Vistas.Login"
+             xmlns:globales ="clr-namespace:ValidarInternet.Vistas.Globales">
+    <Grid>
+        <Grid.Background>
+            <LinearGradientBrush>
+                <GradientStop Color="#FDE07F" Offset="0.1"/>
+                <GradientStop Color="#FF7832" Offset="1.0"/>
+            </LinearGradientBrush>
+        </Grid.Background>
+        <StackLayout VerticalOptions="Center"
+                     IsVisible="{Binding Conectado}">
+            <Label Text="Tu diseño"
+                   FontAttributes="Bold"
+                   HorizontalTextAlignment="Center"
+                   FontSize="50"/>
+        </StackLayout>
+        <globales:ValidarInternet IsVisible="{Binding SinConexion}"/>
+    </Grid>
+</ContentPage>
